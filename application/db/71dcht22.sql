@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 02:34 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Nov 10, 2022 at 03:58 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,33 +24,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profile`
---
-
-CREATE TABLE `profile` (
-  `ID` int(11) DEFAULT NULL,
-  `LastName` varchar(255) DEFAULT NULL,
-  `FirstName` varchar(255) DEFAULT NULL,
-  `Address` varchar(255) DEFAULT NULL,
-  `Sex` varchar(255) DEFAULT NULL,
-  `phone` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `profile`
---
-
-INSERT INTO `profile` (`ID`, `LastName`, `FirstName`, `Address`, `Sex`, `phone`) VALUES
-(1, 'thao', 'thoa', 'thanh hoa', '1', 9435);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `thongtin`
 --
 
 CREATE TABLE `thongtin` (
-  `id` int(100) DEFAULT NULL,
+  `id` int(100) NOT NULL,
   `username` varchar(200) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `Sex` int(10) DEFAULT NULL,
@@ -63,7 +41,29 @@ CREATE TABLE `thongtin` (
 --
 
 INSERT INTO `thongtin` (`id`, `username`, `birthday`, `Sex`, `phone`, `avatar`) VALUES
-(NULL, 'thoa', '2022-11-03', 0, 918370604, 'image/avatar/anh6.jpg');
+(4, 'SEG', '2022-11-03', 0, 246586, 'image/avatar/12220402.jpg'),
+(5, 'vitimex', '2022-11-10', 1, 386891060, 'image/avatar/310852759_5290505497713507_2330725836687222554_n.jpg'),
+(6, 'gmap', '2022-11-09', 0, 386891060, 'image/avatar/310852759_5290505497713507_2330725836687222554_n.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `thongtin`
+--
+ALTER TABLE `thongtin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `thongtin`
+--
+ALTER TABLE `thongtin`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -26,7 +26,6 @@ class Profile_model extends CI_Model
         $this->db->where('id', $id);
         $profile = $this->db->get();
         return $profile->result_array();
-
     }
     
     public function deleteProfileById($id)
@@ -34,7 +33,6 @@ class Profile_model extends CI_Model
         $this->db->where('id', $id);
 
         $this->db->delete('thongtin');
-        redirect('thongtin', 'refresh');
-   
+        redirect('Profile', 'refresh');
 }
 }

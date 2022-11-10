@@ -25,7 +25,7 @@ class Profile extends CI_Controller{
 
         $profile = $this->input->post();
 		//upload file
-		 $target_dir = "image/avatar";
+		 $target_dir = "image/avatar/";
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -83,6 +83,7 @@ class Profile extends CI_Controller{
 		} else {
 			echo 'Có lỗi, thêm  mới thất bại';
 		}
+
 		$data = $this->Profile_model->getAll();
 		$data['allprofile'] = $data;
 
@@ -102,8 +103,8 @@ class Profile extends CI_Controller{
 		} else {
 			echo 'Có lỗi, xóa thất bại';
 		}
-		$data = $this->Profile_model->getAll();
-		$data['allprofile'] = $data;
-		$this->load->view('profilelist_view', $data);
+		// $data = $this->Profile_model->getAll();
+		// $data['allprofile'] = $data;
+		// $this->load->view('profilelist_view', $data);
     }
 }

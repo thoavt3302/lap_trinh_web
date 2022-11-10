@@ -64,7 +64,7 @@
               </a>
 
               <!-- Button Xóa -->
-              <a href="profile/deleteProfileById/<?= $value['id'] ?>" class="btn btn-danger">
+              <a href="<?= base_url() ?>Profile/deleteProfileById/<?= $value['id'] ?>" class="btn btn-danger">
                 <i class="fas fa-trash-alt"></i> Xóa
               </a>
             </td>
