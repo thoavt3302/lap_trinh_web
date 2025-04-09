@@ -37,7 +37,7 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+const PROJECT_SECRET = 'UVFlbkRYYVpBS2NpNUU4lbkRYYVp';
 /**
  * CodeIgniter Session Driver Class
  *
